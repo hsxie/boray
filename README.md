@@ -10,4 +10,5 @@ Can be used to tokamak, spherical tokamak, FRC, mirror, with either numerical or
 Cite: [Xie2021] Hua-sheng XIE, Banerjee Debabrata, Yu-kun BAI, Han-yue ZHAO and Jing-chun LI, BORAY: An Axisymmetric Ray Tracing Code Supports Both Closed and Open Field Lines Plasmas, 2021.
 
 Hua-sheng XIE, huashengxie@gmail.com, ENN
+
 2021-05-25 17:25
