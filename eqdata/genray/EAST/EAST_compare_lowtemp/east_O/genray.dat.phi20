@@ -1,0 +1,240 @@
+ &GENR
+ MNEMONIC = 'exl50'
+ RAYOP = 'both'
+ DIELECTRIC_OP = 'disabled'
+ R0X =   1.00000
+ B0 =   1.00000
+ OUTDAT =  'HL2M.dat'
+ STAT =  'new'
+ outprint = 'enabled'
+ &END
+ &TOKAMAK
+ EQDSKIN = 'g071230.004800' 
+ INDEXRHO =   4
+ IPSI =   1
+ IONETWO =   1
+ IEFFIC =   4  !3(cohen) 2(Eastkarn), 4 (Lin_Liu), 1 (simple non-rel), 6(adj+stix)
+ ieffic_mom_cons = 0 
+ PSIFACTR =   0.999000
+ DELTRIPL =   0.00000
+ NLOOP =   24 !toroidal field coils 
+ I_RIPPLE =   1
+ NR = 50
+ max_limiters = 0
+ n_wall = 0
+ r_wall= 0.158, 1.555, 1.555, 0.158, 0.158 
+ z_wall = -1.405, -1.405, 1.405, 1.405, -1.405
+ &END
+ &WAVE
+ IREFLM =   1  ! 1 = no reflection    
+ no_reflection = 0 ! 0=no reflection
+ FRQNCY = 100
+ IOXM = 1 ! O-1, X--1
+ ioxm_n_npar = 0
+ JWAVE =   2 ! 0(for lin-liu & cohen) 
+ ISTART =   1
+ DELPWRMN =   1.00000e-5
+ IBW =   0
+ I_VGR_INI =   1
+ POLDIST_MX =   500000.00000
+ &END
+ &SCATNPER
+ &END
+ &OX
+ &END
+ &DISPERS
+ IB =  1 ! ecr sorting singularilty removal
+ ID =  2 !1,2,3(AppHart),7(Shka)4,5(Mazz, Vg>1),10(WT+mazz,Vg>1),6(forest,hot),9(bernfried)(hot), 
+ IHERM =   1 ! 2 full, 1 hermitian to use with ID=4,5
+ IABSORP = 9 ! 1(mazzu),9(stix) (no big diff 1&9)!!5(shkai,NAN) ,4(forest),6,7(idiskf)
+ ISWITCH =   0 ! to change dispersion
+ DEL_Y =   0.00100000
+ JY_D =   1
+ IDSWITCH =   2
+ IABSWITCH =   4
+ N_RELT_HARM1 = 2 !9999
+ N_RELT_HARM =  1 !-5 to 5
+ N_RELT_INTGR =  50
+ IFLUX =   1          ! power absorption using QL diffusion
+ I_IM_NPERP =   1 ! used for iabsorp=4
+ iabsorp_ql = 0 ! QL absorption
+ iabsorp_collisional = 0 ! collision
+ i_geom_optic = 1 ! RK integration in time
+ refl_loss = 0
+ &END
+ &lsc_approach_nml
+ i_lsc_approach=0
+ &end
+ &NUMERCL
+ IRKMETH =   2 ! 4th RK variable time step  
+ NDIM1 =   6
+ ISOLV =   1  ! 6 ray equation with correction 
+ ICORRECT =   1
+ IDIF = 1 ! analytical differentiation 2 numerical
+ NRELT =   100000
+ PRMT1 =   0.00000
+ PRMT2 =   999900.
+ PRMT3 =   1.00000e-4
+ PRMT4 =   1.00000e-05 ! solver accuracy
+ PRMT6 =   1.0e-3 !0.0025 
+ IOUT3D =  'enable'
+ MAXSTEPS_RK =   10000
+ toll_hamilt = 1.d-4 ! checking error in dispersion relation
+ i_resonance_curve_integration_method = 4
+ epsi = 1.d-5
+ eps_delta_pow=1.d+10
+ &END
+ &OUTPUT
+ IWCNTR =   1
+ IWOPEN =   1
+ IWJ =   1
+ ITOOLS =   1
+ I_PLOT_B =   1
+ r_freq = 1.5d0 
+ z_freq = 0.0d0
+ alpha_freq = 180.d0
+ beta_freq = 90.d0
+ nsteps_freq = 100
+ npar_freq = 0.0d0
+ dist_freq = 1.6d0
+ max_plot_freq = 20.d0
+ I_PLOT_D =   0
+ &END
+ &PLASMA
+ NDENS =  51
+ NBULK =   2
+ IZEFF =   0
+ IDENS =   0 !0-analytic, 1-spline
+ TEMP_SCALE(2) =   1.000000
+ DEN_SCALE(2) =   5.0
+ &END
+ &SPECIES
+ CHARGE =   1.00000  1.00000  
+ DMAS =   1.00000  3674.00 
+ &END
+ &VARDEN
+ &END
+ &denprof
+ DENSE0(1) =   0.0000
+ DENSE0(2) =   1.0
+ DENSE0(3) =   0.00000
+ DENSEB(1) =   0.0000
+ DENSEB(2) =   0.10  
+ DENSEB(3) =   0.00000
+ RN1DE(1) = 0.00000 
+ RN1DE(2) = 2.00000  
+ RN1DE(3) = 0.00000
+ RN2DE(1) = 0.00000 
+ RN2DE(2) = 1.00000  
+ RN2DE(3) = 0.00000
+ &end
+ &edge_prof_nml
+ i_edge_dens_anal=0
+ dens_min_edge=1.d-9
+ &end
+ &tpopprof
+ tp0(1)=1.0d0
+ tpb(1)=1.0d0
+ rn1tp(1)=0.0d0
+ rn2tp(1)=0.0d0
+ tp0(2)=1.0d0
+ tpb(2)=1.0d0
+ rn1tp(2)=0.0d0
+ rn2tp(2)=0.0d0
+ tp0(3)=1.0d0
+ tpb(3)=1.0d0
+ rn1tp(3)=0.0d0
+ rn2tp(3)=0.0d0
+ &end
+ &zprof
+ &end
+ &tprof
+ ate0 = 0.5  0.5  0.00000
+ ateb = 0.100  0.100  0.00000
+ rn1te = 1.50000  1.50000  2.00000
+ rn2te = 1.00000  1.00000  1.00000
+ &end
+ &GRILL
+ &END
+ &ECCONE
+ RAYPATT =  'genray'
+ ncone = 1
+ POWTOT(1) =  1.0 ! MWatt
+ ZST(1) =  -0.02d0 !0.97 ! 0.0d0
+ RST(1) =  2.35d0 !1.5  ! 2.05d0
+ PHIST(1) =   70.0d0
+ BETAST(1) =  -8.0d0
+ ALFAST(1) = 200.0d0
+ ALPHA1(1) = 4.0
+ ALPHA2(1) = 1.5d+1
+ na1 = 1
+ na2 = 0
+ &END
+ &DENTAB
+ &END
+ &TEMTAB
+ &END
+ &TPOPTAB
+ PROF = 21*0.00000
+ &END
+ &VFLOWTAB
+ PROF = 21*0.00000
+ &END
+ &ZEFTAB
+ &END
+ &READ_DISKF
+ I_DISKF = 0      ! dis. function for cur. efficiency
+ NETCDFNM =  'cqexl50.nc'
+ JX =   200
+ LRZ =   50
+ IYM =   200
+ NGEN =   1
+ RTEM0 =   2000.0000
+ R1T =   0.01000
+ R2T =   0.99000
+ RTAIL =   0.0100
+ TTAIL =   30.0000
+ R1H =   0.05000
+ R2H =   0.95000
+ RHOT =   0.0000
+ THOTPAR =   0.50000
+ THOTPER =   0.50000
+ HOTMNPAR =   0.10000
+ HOTMXPAR =   0.50000
+ HOTMNPER =   0.10000
+ HOTMXPER =   0.50000
+ HOTEXP =   1.00000
+ R1B =   1.00000
+ R2B =   2.00000
+ RBEAM =   0.00000
+ EBEAM =   1.00000
+ THBEAM =   30.0000
+ TBEAM =   1.00000
+ &END
+ &EMISSION
+ &END
+ &adj_nml
+ i_adj=1 ! 1 for adj calculation
+ npsi0=50 !radial mesh                 !=< npsi0a
+ nthp0=500 !poloidal mesh along B      !=< nthp0_a
+ nmax_chi=200 ! u_0 mesh
+ imax_chi=200 ! pitch angle mesh
+ lmax_chi=3 ! 21
+ tmax=10 ! maximum time steps number
+ t=1.d0
+ ze=1.d0
+ umax=15.d0 ! u_0 between 0 & umax
+ dt=1.d0 ! time step in adj solver
+ alpha=0.55d0 ! explicit method alpha=0
+ rho_= 1 ! treatment of boundary at u_0=umax
+ aerrmx=1.d-5
+ rerrmx=2.d-6
+ n_harm_adj_min=1
+ n_harm_adj_max=5
+ n_relt_intgr_adj=200 ! integration points along resonance curve
+ i_resonance_curve_integration_method_adj=4 !integration method for power & CD
+ epsi_adj=1.d-5 !works for i_resonance_curve_integration_method_adj=4 case only
+ i_calculate_or_read_adj_function =1 ! 0 read chi from adjout
+ i_chi_interpolation = 1
+ &end
+
