@@ -13,7 +13,7 @@
 % 
 % Cite: [Xie2021] Hua-sheng XIE, Banerjee Debabrata, Yu-kun BAI, 
 %   Han-yue ZHAO and Jing-chun LI, BORAY: An Axisymmetric Ray Tracing Code
-%   Supports Both Closed and Open Field Lines Plasmas, 2021.
+%   Supports Both Closed and Open Field Lines Plasmas, 2021, https://arxiv.org/abs/2105.12014.
 
 close all; clear; clc;
 
