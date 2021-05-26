@@ -11,9 +11,10 @@
 % Todo: 1. Current Driven. 2. Singularity of hot DR at resonant point.
 %  3. Better analytical profile. 4. Further speed up and improve interp2d.
 % 
-% Cite: [Xie2021] Hua-sheng XIE, Banerjee Debabrata, Yu-kun BAI, 
+% Cite: [Xie2021] Hua-sheng XIE, Debabrata Banerjee, Yu-kun BAI, 
 %   Han-yue ZHAO and Jing-chun LI, BORAY: An Axisymmetric Ray Tracing Code
-%   Supports Both Closed and Open Field Lines Plasmas, 2021, https://arxiv.org/abs/2105.12014.
+%   Supports Both Closed and Open Field Lines Plasmas, 2021, 
+%   https://arxiv.org/abs/2105.12014.
 
 close all; clear; clc;
 
