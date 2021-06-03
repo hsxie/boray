@@ -12,6 +12,7 @@ At present, only Matlab version of BORAY is available, which has been tested in 
 Files structures:
 
 - boray_main.m    % main program, run this code to start the calculation
+
 ./modules         % sub files of the program
   - boray_calpower.m   % calculate the power absorption along the ray use hotdreach.m
   - boray_initialize.m % initialize the equilibrium and other parameters
@@ -26,7 +27,9 @@ Files structures:
   - fcinterp.m % obtain interpolation coefficients of magnetic fields, density and temperature for numerical equilibrium
   - hotdreach.m % solve the hot kinetic plasma dispersion relation to obtain omgea_i for power absorption
   - initialsolovev.m % initialize the analytical Solovev equilibrium
+
 ./eqdata % input profiles data for numerical equilibrium
+
 ./output % store the output and plot figures
 
 How to run the code:
@@ -62,3 +65,5 @@ If you meet any problems, please contact me.
 Hua-sheng XIE, huashengxie@gmail.com, ENN
 
 2021-06-02 22:52
+
+
