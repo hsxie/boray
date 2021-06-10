@@ -9,7 +9,8 @@ if(jray==1)
     
     if(numeq==1)
         % initialize plasma density ns0(r,z) and magnetic field B(r,z)
-        load(['../input/',eqfile]);
+        % load(['../input/',eqfile]);
+        load(eqfile);
         
         % initial interp2d coefficients
         [fcB,fcBr,fcBz,fcBphi,fcpsi,fcns0,fcts0,fcdBdr,fcdBdz,fcdBrdr,...
